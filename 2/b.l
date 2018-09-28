@@ -1,47 +1,36 @@
 %{
 #include<stdio.h>
+#include<string.h>
+int i , j=0 , flag;
+char id[20][20];
 %}
+
+digit [0-9]
+letter [a-zA-Z]
 
 %%
 
-[ \t\n] {;}
-
-#.* {;}
-
-auto;
-break;
-case;
-char;
-const;
-continue;
-default;
-do;
-double;
-else;
-enum;
-extern;
-float;
-for;
-goto;
-if;
-int;
-long;
-register;
-return;
-short;
-signed;
-sizeof;
-static;
-struct;
-switch;
-typedef;
-union;
-unsigned;
-void;
-volatile;
-while;
-
-[a-zA-Z][a-zA-Z0-9_]* {printf("%s\n" , yytext);}
+[\t\n ]
+[!@#$%^&*(){}<>",;=:]
+if|else|int|char|void|main|include|stdio.h|printf|scanf|return
+{digit}({letter}|{digit})*
+\"(\\.|[^"\\])*\"
+{letter}({letter}|{digit})* {	flag=0;
+				for(i=0 ; i<20 ; i++)
+				{
+					if(!strcmp(id[i] , yytext))
+					{
+						flag=1;
+						break;
+					}
+				}
+				if(flag==0)
+				{
+					printf("%s\n" , yytext);
+					strcpy(id[j] , yytext);
+                                        j += 1;
+				}
+			    }
 
 %%
 
@@ -53,5 +42,6 @@ int yywrap()
 void main()
 {
 	yyin = fopen("pgm.c" , "r");
+	printf("The identifiers are: \n");
 	yylex();
 }

@@ -1,6 +1,6 @@
 void main()
 {
-	int a=5;
+	int a1=5;
 	int b=6;
 	if(a>=b)
 	   a=1;

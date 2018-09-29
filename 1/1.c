@@ -9,7 +9,7 @@ void main()
 
 	int state = 0 , i, flag;
 	char ch, buffer[10];
-	char sym[10][10] = {"int" , "float" , "void" , "main"};
+	char sym[10][10] = {"int" , "float" , "void"};
 	int len = sizeof(sym)/sizeof(sym[0]) , buflen;
 	buffer[0] = '\0';
 
@@ -96,7 +96,7 @@ void main()
                                 break;
 			case 9:
 				ch = getc(fptr);
-				if(isalpha(ch))
+				if(isalnum(ch))
 				{
 					buflen = strlen(buffer);
                                         buffer[buflen] = ch;

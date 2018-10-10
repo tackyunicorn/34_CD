@@ -56,7 +56,9 @@ extern int yydebug;
     Q = 266,
     BR = 267,
     SEM = 268,
-    NUM = 269
+    NUM = 269,
+    EQ = 270,
+    OP = 271
   };
 #endif
 /* Tokens.  */
@@ -72,6 +74,8 @@ extern int yydebug;
 #define BR 267
 #define SEM 268
 #define NUM 269
+#define EQ 270
+#define OP 271
 
 /* Value type.  */
 #if ! defined YYSTYPE && ! defined YYSTYPE_IS_DECLARED

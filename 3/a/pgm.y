@@ -2,13 +2,13 @@
 #include<stdio.h>
 %}
 
-%token SW OB CB ID NL COB CCB CS Q BR SEM NUM
+%token SW OB CB ID NL COB CCB CS Q BR SEM NUM EQ OP
 
 %%
 
 S : X NL
   ;
-X : SW OB ID CB NL COB NL CS NUM Q ID NL BR SEM NL CCB
+X : SW OB ID CB NL COB NL CS NUM Q ID EQ ID OP ID SEM NL BR SEM NL CCB
   ;
 
 %%

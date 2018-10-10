@@ -2,14 +2,14 @@
 #include<stdio.h>
 %}
 
-%token NUM NL
+%token ID NUM NL
 %left '+''-'
 %left '*''/'
 %left '('')'
 
 %%
 
-S : E NL
+S : E NL {printf("Valid\n");}
   ;
 E : E'+'E
   | E'-'E
@@ -17,6 +17,7 @@ E : E'+'E
   | E'/'E
   | '('E')'
   | NUM
+  | ID
   | NL
   ;
 

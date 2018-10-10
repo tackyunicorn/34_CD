@@ -6,7 +6,7 @@
 
 %%
 
-S : X NL
+S : X NL {printf("\nValid switch statement!");}
   ;
 X : SW OB ID CB NL COB NL CS NUM Q ID EQ ID OP ID SEM NL BR SEM NL CCB
   ;

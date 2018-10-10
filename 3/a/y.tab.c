@@ -1224,8 +1224,14 @@ yyreduce:
   YY_REDUCE_PRINT (yyn);
   switch (yyn)
     {
-      
-#line 1229 "y.tab.c" /* yacc.c:1646  */
+        case 2:
+#line 9 "pgm.y" /* yacc.c:1646  */
+    {printf("\nValid switch statement!");}
+#line 1231 "y.tab.c" /* yacc.c:1646  */
+    break;
+
+
+#line 1235 "y.tab.c" /* yacc.c:1646  */
       default: break;
     }
   /* User semantic actions sometimes alter yychar, and that requires

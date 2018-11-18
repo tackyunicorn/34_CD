@@ -114,6 +114,6 @@ void main()
 		if(i != row)
         	printf("%c = %c %c %c;\n" , quad[i][3] , quad[i][1] , quad[i][0] , quad[i][2]);
 		else
-			printf("%c = %c\n" , quad[i][1] , quad[i][2]);
+			printf("%c = %c;\n" , quad[i][1] , quad[i][2]);
 	}
 }

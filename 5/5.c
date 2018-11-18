@@ -29,7 +29,7 @@ int main()
             {
                   case 1: printf("\nEnter the value to find first: ");
                           scanf(" %c", &ch);
-                          result[0] == '\0';
+                          result[0] = '\0';
                           first(result, ch);
                           printf("\nFIRST[%c] = {", ch);
                           for(i = 0; result[i] != '\0' ; i++)
@@ -38,10 +38,10 @@ int main()
                           }
                           printf("}\n");
                           result[0] = '\0';
-                         break;
+                          break;
                   case 2: printf("\nEnter the value to find follow: ");
                           scanf(" %c", &ch);
-                          result[0] == '\0';
+                          result[0] = '\0';
                           follow(result, ch);
                           printf("\nFOLLOW[%c] = {", ch);
                           for(i = 0; result[i] != '\0' ; i++)

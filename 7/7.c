@@ -2,7 +2,7 @@
 #include<ctype.h>
 
 char ip[20], quad[10][4], id[10], op[10], oper, id1, id2;
-int i, j, topi=-1 , topo=-1, row=0, res=122;
+int i, j, topi=-1 , topo=-1, row=0, res=90;
 
 void push(char *st, int *top, char ch)
 {

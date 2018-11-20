@@ -11,9 +11,11 @@ op [\+\-\/\*]
 "switch"  {return SW;}
 "case"    {return CS;}
 "break"   {return BR;}
+"default" {return DEF;}
 "("       {return OB;}
 ")"       {return CB;}
 {id}      {return ID;}
+{id}\(\)      {return FUNC;}
 {num}     {return NUM;}
 {op}      {return OP;}
 "\n"      {return NL;}
